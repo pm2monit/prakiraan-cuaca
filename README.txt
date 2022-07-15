@@ -22,7 +22,7 @@ This plugin is very easy to install, even if you are not a programmer
 
 == Installation ==
 
-1. Upload `prakiraan-cuaca-dan-info-gempa.php` to the `/wp-content/plugins/` directory
+1. Upload `prakiraan-cuaca-dan-info-gempa` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Create a widget or web page and then insert the sort code [prakiraan-cuaca]
 

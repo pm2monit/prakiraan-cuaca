@@ -44,9 +44,9 @@ class Prakiraan_Cuaca_Dan_Info_Gempa_Public {
 	public function p_cuaca() {
 		ob_start();
 		include_once PRAKIRAAN_CUACA_PATH . 'public/partials/prakiraan-cuaca-dan-info-gempa-public-display.php';
-		$template = ob_get_contents();
+		$hal = ob_get_contents();
 		ob_end_clean();
-		echo $template;
+		echo $hal;
 	}
 
 }

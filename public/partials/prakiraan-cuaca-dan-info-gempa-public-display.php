@@ -11,7 +11,7 @@
  * @package    Prakiraan_Cuaca_Dan_Info_Gempa
  * @subpackage Prakiraan_Cuaca_Dan_Info_Gempa/public/partials
  */
-
+// echo $url_1;
 ?>
 
 
@@ -37,15 +37,17 @@
 
 </div>
 
-
+<?php 
+    $url_req_1 = "https://bmkg.vercel.app/weather/dki-jakarta"; 
+    $url_req_2 = "https://bmkg.vercel.app/quake"; 
+?>
 
 <script type="text/javascript">
-
 
     (( $ ) => { 
         
         var request = {
-            "url": "https://bmkg.vercel.app/weather/dki-jakarta",
+            "url": "<?php echo esc_js($url_req_1); ?>",
             "method": "GET",
             "timeout": 0,
             success: (response) => {
@@ -109,7 +111,7 @@
     (($) => {
 
         var settings = {
-        "url": "https://bmkg.vercel.app/quake",
+        "url": "<?php echo esc_js($url_req_2); ?>",
         "method": "GET",
         "timeout": 0,
     };

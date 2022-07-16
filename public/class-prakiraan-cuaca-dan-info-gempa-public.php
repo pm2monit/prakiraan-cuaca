@@ -44,9 +44,19 @@ class Prakiraan_Cuaca_Dan_Info_Gempa_Public {
 	public function p_cuaca() {
 		ob_start();
 		include_once PRAKIRAAN_CUACA_PATH . 'public/partials/prakiraan-cuaca-dan-info-gempa-public-display.php';
-		$hal = ob_get_contents();
+		$template = ob_get_contents();
 		ob_end_clean();
-		echo $hal;
+
+		// $a = array(
+		// 	'url_1' => 'https://bmkg.vercel.app/weather/dki-jakarta',
+		// 	'url_2' => 'https://bmkg.vercel.app/quake',
+		// 	'data' => array(
+		// 		'url_1' => 'https://bmkg.vercel.app/weather/dki-jakarta',
+		// 		'url_2' => 'https://bmkg.vercel.app/quake'
+		// 	),
+		// );
+		// echo wp_kses($template, $a);
+		return $template;
 	}
 
 }
